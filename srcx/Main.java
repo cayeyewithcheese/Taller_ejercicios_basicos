@@ -1,8 +1,14 @@
-public class Main {
-    public static void main(String[] args){
-        String texto1 = "Hola ";
-        String texto2 = "Mundo";
-        String Resultado = texto1 + "" + texto2;
-        System.out.println(Resultado);
+import java.util.Scanner;
+public class Main{
+
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Porfavor ingrese su nombre");
+        String nombre = sc.nextLine();
+
+        System.out.println("Hola" + nombre);
     }
 }
+
