@@ -8,7 +8,7 @@ public class Main{
         System.out.println("Porfavor ingrese su nombre");
         String nombre = sc.nextLine();
 
-        System.out.println("Hola" + nombre);
+        System.out.println("Hola" + " " + nombre);
     }
 }
 
