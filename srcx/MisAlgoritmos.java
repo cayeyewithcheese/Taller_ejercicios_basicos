@@ -21,4 +21,10 @@ public class MisAlgoritmos {
         System.out.println("Hola" + " " + nombre);
 
     }
+    void punto3(){
+        int numero = 4;
+        int cuadrado = numero * numero;
+
+        System.out.println("El cuadrado de :" + numero +" es : " + cuadrado);
+    }
 }
