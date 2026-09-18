@@ -1,21 +1,18 @@
-
+import java.util.Scanner;
 public class Main{
 
 
     public static void main(String[] args) {
-        int num1 = 9;
-        int num2 = 2;
-        int suma = num1 + num2;
-        int resta = num1 - num2;
-        int multiplicacion = num1 * num2;
-        int division = num1 / num2;
-        int residuo = num1 % num2;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Ingrese un numero decimal:");
+        double numero = sc.nextDouble();
+        int parteEntera = (int) numero;
+        double parteDecimal = numero - parteEntera;
+        System.out.println("parte entera:" + parteEntera);
+        System.out.println("parte decimal:" + parteDecimal);
+        sc.close();
 
-        System.out.println("La suma es: " + suma);
-        System.out.println("La resta es: " + resta);
-        System.out.println("La multiplicacion es: " + multiplicacion);
-        System.out.println("La division es: " + division);
-        System.out.println("La residuo es: " + residuo);
+
     }
 }
 
