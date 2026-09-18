@@ -1,14 +1,12 @@
-import java.util.Scanner;
+
 public class Main{
 
 
     public static void main(String[] args) {
+        int numero = 4;
+        int cuadrado = numero * numero;
 
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Porfavor ingrese su nombre");
-        String nombre = sc.nextLine();
-
-        System.out.println("Hola" + " " + nombre);
+        System.out.println("El cuadrado de :" + numero +" es : " + cuadrado);
     }
 }
 
