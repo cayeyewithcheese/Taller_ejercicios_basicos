@@ -17,8 +17,8 @@ public class Main{
         System.out.println("parte decimal:" + parteDecimal);
         sc.close();
 */
-        misAlgoritmos.punto1();
 
+        misAlgoritmos.punto2();
     }
 }
 
