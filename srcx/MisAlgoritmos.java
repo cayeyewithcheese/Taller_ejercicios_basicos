@@ -49,4 +49,14 @@ public class MisAlgoritmos {
         System.out.println("La division es: " + division);
         System.out.println("La residuo es: " + residuo);
     }
+    void punto6(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Ingrese un numero decimal:");
+        double numero = sc.nextDouble();
+        int parteEntera = (int) numero;
+        double parteDecimal = numero - parteEntera;
+        System.out.println("parte entera:" + parteEntera);
+        System.out.println("parte decimal:" + parteDecimal);
+        sc.close();
+    }
 }
