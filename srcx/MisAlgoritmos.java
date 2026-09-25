@@ -28,6 +28,13 @@ public class MisAlgoritmos {
         System.out.println("El cuadrado de :" + numero +" es : " + cuadrado);
     }
     void punto4(){
+        int numero1 = 4;
+        int numero2 = 5;
+        int suma = numero1 + numero2;
+
+        System.out.println("La suma es: " + suma);
+    }
+    void punto(){
         int num1 = 9;
         int num2 = 2;
         int suma = num1 + num2;
