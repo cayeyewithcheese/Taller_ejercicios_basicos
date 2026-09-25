@@ -96,5 +96,16 @@ public class MisAlgoritmos {
         System.out.println("precio con iva: " + precioConIVA);
 
     }
+    private static final double radius = 4.7;
+
+    void punto9(){
+        double perimetro= 2 * Math.PI * radius;
+
+        double area = Math.PI * radius * radius;
+
+        System.out.println("El perimetro es: " + perimetro);
+        System.out.println("El area del circulo es:  " + area);
+
+    }
 
 }
