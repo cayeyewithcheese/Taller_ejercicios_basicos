@@ -107,5 +107,16 @@ public class MisAlgoritmos {
         System.out.println("El area del circulo es:  " + area);
 
     }
+    public static double calcularAreaHexagono(double lado){
+        double area = (3 * Math.sqrt(3) * lado * lado) / 2;
+        return area;
+    }
 
+    void punto10() {
+        Scanner teclado = new Scanner(System.in);
+        System.out.println("Ingrese el lado del hexagono:");
+        double lado = teclado.nextDouble();
+        double area = calcularAreaHexagono(lado);
+        System.out.println("El area del hexagono es: " + area);
+    }
 }

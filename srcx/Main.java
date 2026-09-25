@@ -18,7 +18,8 @@ public class Main{
         sc.close();
 */
 
-        misAlgoritmos.punto9();
+        misAlgoritmos.punto10();
     }
+
 }
 
