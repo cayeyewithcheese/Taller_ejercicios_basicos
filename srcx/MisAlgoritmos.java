@@ -59,4 +59,42 @@ public class MisAlgoritmos {
         System.out.println("parte decimal:" + parteDecimal);
         sc.close();
     }
+    public static double calcularPromedio( double n1, double n2, double n3, double n4, double n5){
+        double resultado = (n1 * 0.15) + (n2 * 0.20) + (n3 * 0.15) + (n4 * 0.30) + (n5 * 0.20);
+        return resultado;
+    }
+    void punto7(){
+
+        Scanner teclado = new Scanner(System.in);
+        System.out.println("Ingrese sus notas: ");
+        System.out.println("Ingrese su primera nota: ");
+        double n1 = teclado.nextDouble();
+        System.out.println("Ingrese su segunda nota: ");
+        double n2 = teclado.nextDouble();
+        System.out.println("Ingrese su tercera nota: ");
+        double n3 = teclado.nextDouble();
+        System.out.println("Ingrese su cuarta nota: ");
+        double n4 = teclado.nextDouble();
+        System.out.println("Ingrese su quinta nota: ");
+        double n5 = teclado.nextDouble();
+        double notaFinal = calcularPromedio(n1, n2, n3, n4, n5);
+        System.out.println("Su promedio de notas es:" + notaFinal);
+    }
+    public static double calcularIVA(double precioBruto){
+        double iva = precioBruto * 0.19;
+        double precioConIVA = precioBruto + iva;
+        return precioConIVA;
+    }
+    void punto8(){
+        Scanner teclado = new Scanner(System.in);
+        System.out.println("Ingrese el precio bruto:");
+        double precioBruto = teclado.nextDouble();
+        double precioConIVA = calcularIVA(precioBruto);
+        double valorIVA = precioBruto * 0.19;
+        System.out.println("Precio bruto:" + precioBruto);
+        System.out.println("valor de iva:" + valorIVA);
+        System.out.println("precio con iva: " + precioConIVA);
+
+    }
+
 }
