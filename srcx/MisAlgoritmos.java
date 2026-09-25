@@ -34,7 +34,7 @@ public class MisAlgoritmos {
 
         System.out.println("La suma es: " + suma);
     }
-    void punto(){
+    void punto5(){
         int num1 = 9;
         int num2 = 2;
         int suma = num1 + num2;
