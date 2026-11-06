@@ -162,6 +162,188 @@ public class MisAlgoritmos {
         System.out.println("La distancia es:" + distancia);
     }
     void punto13(){
+        Scanner teclado = new Scanner(System.in);
+        int n, num1, num2, num3, suma;
+        System.out.println("Ingrese un digito:");
+        n = teclado.nextInt();
+
+        num1 = n;
+        num2 = n * 11;
+        num3 = n * 111;
+        suma = num1 + num2 + num3;
+        System.out.println("Primer numero:" + num1);
+        System.out.println("Segundo numero:" + num2);
+        System.out.println("Tercer numero:" + num3);
+        System.out.println("La suma es:" + suma);
+
+    }
+    void punto14(){
+        Scanner teclado = new Scanner(System.in);
+        int segundos, horas , minutos;
+        System.out.println("Ingrese la cantidad de segundos:");
+        segundos = teclado.nextInt();
+        horas = segundos / 3600;
+        segundos = segundos % 3600;
+        minutos = segundos / 60;
+        segundos = segundos % 60;
+        System.out.println("La hora es:" + horas + ":" + minutos + ":" + segundos);
+    }
+
+    void punto15(){
+        Scanner teclado = new Scanner(System.in);
+        int numero;
+        System.out.println("Ingrese un numero:");
+        numero = teclado.nextInt();
+        if ( numero % 2 == 0) {
+            System.out.println("El numero es par:");
+        } else {
+            System.out.println("El numero es impar:");
+        }
+    }
+    void punto16(){
+        Scanner teclado = new Scanner(System.in);
+        int numero;
+        System.out.println("Ingrese un numero:");
+        numero = teclado.nextInt();
+        if ( numero > 0) {
+            System.out.println("El numero es positivo:");
+        } else {
+            System.out.println("El numero es negativo:");
+        }
+
+    }
+    double calcularIvapunto17(double venta){
+        double iva;
+        iva = venta * 0.19;
+        return iva;
+    }
+
+    void punto17(){
+        Scanner teclado = new Scanner(System.in);
+        double venta, descuento = 0, iva,total;
+        System.out.println("Ingrese el valor de la venta:");
+        venta = teclado.nextDouble();
+        if ( venta > 150000) {
+            descuento = venta * 0.05;
+        }
+        venta = venta - descuento;
+        iva = calcularIvapunto17(venta);
+        total = venta + iva;
+        System.out.println("El descuento es :" + descuento);
+        System.out.println("El iva es :" + iva);
+        System.out.println("El total a pagar es :" + total);
+    }
+
+    void punto18(){
+        Scanner teclado = new Scanner(System.in);
+        double n1, n2, n3, n4, n5, notaFinal;
+
+        System.out.println("Ingrese su primera nota: ");
+        n1 = teclado.nextDouble();
+        System.out.println("Ingrese su segunda nota: ");
+        n2 = teclado.nextDouble();
+        System.out.println("Ingrese su tercera nota: ");
+        n3 = teclado.nextDouble();
+        System.out.println("Ingrese su cuarta nota: ");
+        n4 = teclado.nextDouble();
+        System.out.println("Ingrese su quinta nota: ");
+        n5 = teclado.nextDouble();
+        notaFinal = calcularPromedio(n1, n2, n3, n4, n5);
+        System.out.println("La nota final es" + notaFinal);
+        if (notaFinal < 2.0) {
+            System.out.println("No puede habilitar:");
+        } else if (notaFinal < 3.0) {
+            System.out.println("Reprobo");
+        } else {
+            System.out.println("Aprobo");
+            if (notaFinal > 4.5){
+                System.out.println("Felicitaciones wow");
+            }
+        }
+
+    }
+    void punto19(){
+        Scanner teclado = new Scanner(System.in);
+        double a, b, c, discriminante, x1, x2;
+        System.out.println("Ingrese el valor de a : ");
+        a = teclado.nextDouble();
+        System.out.println("Ingrese el valor de b : ");
+        b = teclado.nextDouble();
+        System.out.println("Ingrese el valor de c : ");
+        c = teclado.nextDouble();
+
+        if (a == 0) {
+            System.out.println("No es una ecuacion cuadratica: ");
+        } else {
+            discriminante = b * b - 4 * a * c;
+            if (discriminante >= 0) {
+                x1 = (-b + Math.sqrt(discriminante)) / (2 * a);
+                x2 = (-b - Math.sqrt(discriminante)) / (2 * a);
+                System.out.println("Primera solucion : " + x1);
+                System.out.println("Segunda solucion : " + x2);
+            } else {
+                System.out.println("No tiene soluciones reales ");
+            }
+        }
+
+    }
+    void punto20(){
+        Scanner teclado = new Scanner(System.in);
+        String usuario, contrasena;
+        System.out.println("Ingrese su usuario : ");
+        usuario = teclado.nextLine();
+        System.out.println("Ingrese su contrasena : ");
+        contrasena = teclado.nextLine();
+        if (usuario.equals("carlos") && contrasena.equals("1234")) {
+            System.out.println("Bienvenido");
+        } else {
+            System.out.println("Usuario o contrasena incorrectos");
+        }
+    }
+    void punto21(){
+        Scanner teclado = new Scanner(System.in);
+        int numero;
+        System.out.println("Ingrese un numero de 0 y 10: ");
+        numero = teclado.nextInt();
+        switch (numero){
+            case 0:
+                System.out.println("Cero");
+                break;
+            case 1:
+                System.out.println("Uno");
+                break;
+            case 2:
+                System.out.println("Dos");
+                break;
+            case 3:
+                System.out.println("Tres");
+                break;
+            case 4:
+                System.out.println("Cuatro");
+                break;
+            case 5:
+                System.out.println("Cinco");
+                break;
+            case 6: System.out.println("Seis");
+                break;
+            case 7:
+                System.out.println("Siete");
+                break;
+            case 8:
+                System.out.println("Ocho");
+                break;
+            case 9:
+                System.out.println("Nueve");
+                break;
+            case 10:
+                System.out.println("Diez");
+                break;
+            default:
+                System.out.println("Numero fuera de rango");
+                break;
+        }
+    }
+    void punto22(){
 
     }
 }
