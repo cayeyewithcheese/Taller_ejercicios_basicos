@@ -8,17 +8,10 @@ public class Main{
 
     public static void main(String[] args) {
         MisAlgoritmos misAlgoritmos = new MisAlgoritmos();
-/*
-        System.out.println("Ingrese un numero decimal:");
-        double numero = sc.nextDouble();
-        int parteEntera = (int) numero;
-        double parteDecimal = numero - parteEntera;
-        System.out.println("parte entera:" + parteEntera);
-        System.out.println("parte decimal:" + parteDecimal);
-        sc.close();
-*/
 
-        misAlgoritmos.punto10();
+
+
+        misAlgoritmos.punto12();
     }
 
 }
