@@ -555,7 +555,10 @@ public class MisAlgoritmos {
         area = calcularArea(perimetro, apotema);
 
         System.out.println("El area del poligono es: " + area);
-    
+
+    }
+    void punto31(){
+        
     }
 }
 
