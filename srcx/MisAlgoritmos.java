@@ -344,7 +344,218 @@ public class MisAlgoritmos {
         }
     }
     void punto22(){
+        Scanner teclado = new Scanner(System.in);
 
+        int numero, contador = 0;
+
+        System.out.println("Ingrese un numero menor que 100000:");
+        numero = teclado.nextInt();
+
+        if (numero < 0 || numero >= 100000) {
+            System.out.println("Numero fuera de rango");
+        } else {
+            if (numero == 0) {
+                contador = 1;
+            } else {
+                while (numero > 0) {
+                    numero = numero / 10;
+                    contador++;
+                }
+            }
+
+            System.out.println("El numero tiene " + contador + " digitos");
+        }
+    }
+
+    void punto23(){
+        Scanner teclado = new Scanner(System.in);
+
+        int n1, n2, n3;
+
+        System.out.println("Ingrese el primer numero:");
+        n1 = teclado.nextInt();
+
+        System.out.println("Ingrese el segundo numero:");
+        n2 = teclado.nextInt();
+
+        System.out.println("Ingrese el tercer numero:");
+        n3 = teclado.nextInt();
+
+        if (n1 < n2 && n2 < n3) {
+            System.out.println("Esta incrementando");
+        } else if (n1 > n2 && n2 > n3) {
+            System.out.println("Esta disminuyendo");
+        } else {
+            System.out.println("Ni se incrementa ni se disminuye");
+        }
+    }
+    void punto24(){
+        Scanner teclado = new Scanner(System.in);
+
+        int numero;
+
+        System.out.println("Ingrese un numero entre 1 y 7:");
+        numero = teclado.nextInt();
+
+        switch (numero) {
+            case 1:
+                System.out.println("Lunes");
+                break;
+            case 2:
+                System.out.println("Martes");
+                break;
+            case 3:
+                System.out.println("Miercoles");
+                break;
+            case 4:
+                System.out.println("Jueves");
+                break;
+            case 5:
+                System.out.println("Viernes");
+                break;
+            case 6:
+                System.out.println("Sabado");
+                break;
+            case 7:
+                System.out.println("Domingo");
+                break;
+            default:
+                System.out.println("Numero fuera de rango");
+                break;
+        }
+    }
+    String invertirTexto(String texto) {
+        String invertido = "";
+
+        for (int i = texto.length() - 1; i >= 0; i--) {
+            invertido = invertido + texto.charAt(i);
+        }
+
+        return invertido;
+    }
+    void punto25(){
+        Scanner teclado = new Scanner(System.in);
+
+        String texto, resultado;
+
+        System.out.println("Ingrese un texto:");
+        texto = teclado.nextLine();
+
+        resultado = invertirTexto(texto);
+
+        System.out.println("Texto invertido: " + resultado);
+    }
+
+    void punto26(){
+        Scanner teclado = new Scanner(System.in);
+
+        String texto, resultado = "";
+
+        System.out.println("Ingrese un texto:");
+        texto = teclado.nextLine();
+
+        boolean mayuscula = true;
+
+        for (int i = 0; i < texto.length(); i++) {
+            char letra = texto.charAt(i);
+
+            if (letra != ' ') {
+                if (mayuscula) {
+                    resultado = resultado + Character.toUpperCase(letra);
+                    mayuscula = false;
+                } else {
+                    resultado = resultado + letra;
+                }
+            } else {
+                resultado = resultado + letra;
+                mayuscula = true;
+            }
+        }
+
+        System.out.println("Texto con mayusculas: " + resultado);
+
+    }
+    void punto27(){
+        Scanner teclado = new Scanner(System.in);
+
+        String texto, palabras[];
+
+        System.out.println("Ingrese un texto:");
+        texto = teclado.nextLine();
+
+        palabras = texto.trim().split("\\s+");
+
+        if (palabras.length < 2) {
+            System.out.println("Debe ingresar al menos dos palabras");
+        } else {
+            System.out.println("La penultima palabra es: "
+                    + palabras[palabras.length - 2]);
+        }
+
+    }
+    void punto28(){
+        Scanner teclado = new Scanner(System.in);
+
+        String texto1, texto2;
+
+        System.out.println("Ingrese el primer texto:");
+        texto1 = teclado.nextLine();
+
+        System.out.println("Ingrese el segundo texto:");
+        texto2 = teclado.nextLine();
+
+        if (texto2.contains(texto1)) {
+            System.out.println("El segundo texto contiene el primero");
+        } else {
+            System.out.println("El segundo texto no contiene el primero");
+        }
+    }
+    boolean esPalindromo(String palabra) {
+        String invertida = "";
+
+        for (int i = palabra.length() - 1; i >= 0; i--) {
+            invertida = invertida + palabra.charAt(i);
+        }
+
+        return palabra.equalsIgnoreCase(invertida);
+    }
+    void punto29(){
+        Scanner teclado = new Scanner(System.in);
+
+        String palabra;
+
+        System.out.println("Ingrese una palabra:");
+        palabra = teclado.nextLine();
+
+        if (esPalindromo(palabra)) {
+            System.out.println("Es palindromo");
+        } else {
+            System.out.println("No es palindromo");
+        }
+
+    }
+    double calcularArea(double perimetro, double apotema) {
+        double area;
+
+        area = (perimetro * apotema) / 2;
+
+        return area;
+    }
+    void punto30(){
+        Scanner teclado = new Scanner(System.in);
+
+        double perimetro, apotema, area;
+
+        System.out.println("Ingrese el perimetro del poligono:");
+        perimetro = teclado.nextDouble();
+
+        System.out.println("Ingrese la apotema del poligono:");
+        apotema = teclado.nextDouble();
+
+        area = calcularArea(perimetro, apotema);
+
+        System.out.println("El area del poligono es: " + area);
+    
     }
 }
 
