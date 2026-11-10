@@ -558,7 +558,80 @@ public class MisAlgoritmos {
 
     }
     void punto31(){
-        
+        for (int i = 1; i <= 10; i++) {
+            System.out.println(i);
+        }
+
     }
+
+    void punto32(){
+
+        for (int i = 1; i <= 19; i = i + 2) {
+            System.out.println(i);
+        }
+
+    }
+    void punto33(){
+        for (int i = 2; i <= 20; i = i + 2) {
+            System.out.println(i);
+        }
+    }
+    void punto34(){
+        Scanner teclado = new Scanner(System.in);
+
+        int numero;
+
+        System.out.println("Ingrese un numero entero positivo:");
+        numero = teclado.nextInt();
+
+        while (numero <= 0) {
+            System.out.println("Numero no valido. Intente nuevamente:");
+            numero = teclado.nextInt();
+        }
+
+        System.out.println("El numero ingresado es: " + numero);
+    }
+    void punto35(){
+        Scanner teclado = new Scanner(System.in);
+
+        int numero, residuo;
+        String binario = "";
+
+        System.out.println("Ingrese un numero decimal:");
+        numero = teclado.nextInt();
+
+        if (numero == 0) {
+            binario = "0";
+        } else {
+            while (numero > 0) {
+                residuo = numero % 2;
+                binario = residuo + binario;
+                numero = numero / 2;
+            }
+        }
+
+        System.out.println("El numero en binario es: " + binario);
+    }
+    void punto36(){
+        Scanner teclado = new Scanner(System.in);
+
+        int binario, residuo, decimal = 0, potencia = 1;
+
+        System.out.println("Ingrese un numero binario:");
+        binario = teclado.nextInt();
+
+        while (binario > 0) {
+            residuo = binario % 10;
+
+            decimal = decimal + residuo * potencia;
+
+            potencia = potencia * 2;
+
+            binario = binario / 10;
+        }
+
+        System.out.println("El numero decimal es: " + decimal);
+    }
+    
 }
 
